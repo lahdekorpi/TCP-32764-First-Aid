@@ -27,7 +27,7 @@ routerip=192.168.1.1
 routeruser=admin
 routerpassword=1234
 
-while getopts 'hiup:' option; do
+while getopts ':h:i:u:p:' option; do
 	case "$option" in
 		h)
 			echo "$usage"
