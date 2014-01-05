@@ -27,12 +27,8 @@ routerip=192.168.1.1
 routeruser=admin
 routerpassword=1234
 
-while getopts ':h:i:u:p:' option; do
+while getopts ':i:u:p:' option; do
 	case "$option" in
-		h)
-			echo "$usage"
-			exit
-			;;
 		i)
 			routerip=$OPTARG
 			;;
@@ -43,6 +39,7 @@ while getopts ':h:i:u:p:' option; do
 			routerpassword=$OPTARG
 			;;
 		\?)
+			echo "$usage"
 			exit 1
 			;;
 	esac
